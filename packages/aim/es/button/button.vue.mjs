@@ -1,4 +1,5 @@
 import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, createTextVNode } from "vue";
+import "./style/index.less.mjs";
 const _hoisted_1 = /* @__PURE__ */ createTextVNode("555");
 const __default__ = defineComponent({ name: "ai-button" });
 const _sfc_main = /* @__PURE__ */ defineComponent({
@@ -13,7 +14,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("button", {
-        class: normalizeClass(["ea-button", unref(buttonStyle)])
+        class: normalizeClass(["aim-button", unref(buttonStyle)])
       }, [
         renderSlot(_ctx.$slots, "default", {}, () => [
           _hoisted_1

@@ -1,26 +1,25 @@
-export  * from './components';
+export * from './components';
 import * as components from './components';
 import { isValidKey } from './utils';
 
-import type { App, Plugin } from "vue";
+import type { App, Plugin } from 'vue';
 
 type SFCWithInstall<T> = T & Plugin;
 
 const AimUI = {
-  ...components,
+  ...components
   // iButton: components.Button,
 };
 
-const install = function(app:App):void {
-
+const install = function (app: App): void {
   //registe components
-  Object.keys(AimUI).forEach(key  => {
-    if(isValidKey(key,AimUI)){
+  Object.keys(AimUI).forEach((key) => {
+    if (isValidKey(key, AimUI)) {
       const name = (AimUI[key] as any).name;
       app.component(name, AimUI[key]);
     }
   });
-}
+};
 const Aim = {
   // version,
   // locale,
